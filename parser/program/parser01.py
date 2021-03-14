@@ -33,18 +33,26 @@ class Parser:
 
 	def to_list(self):
 		result4 = self.result3.split(' ')
+		self.result4 = result4
 		return result4
 
 
 def main():
 	test = Parser()
 	test.lowerize()
+	print(
+		"Tout en minuscules :\n", test.result)
 	print("--------------------")
 	test.decodize()
+	print(
+		"Tout sans accentuation :\n", test.result2)
 	print("--------------------")
 	test.remove_ponc()
+	print(
+		"Tout sans ponctuation :\n", test.result3)
 	print("--------------------")
 	test.to_list()
+	print("La liste :\n", test.result4)
 
 if __name__ == "__main__":
     main()
