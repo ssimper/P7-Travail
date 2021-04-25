@@ -1,0 +1,7 @@
+{'results': [{'formatted_address': '35 Rue du Chevalier de la Barre, 75018 '
+                                   'Paris, France',
+              'geometry': {'location': {'lat': 48.88670459999999,
+                                        'lng': 2.3431043}}}
+              
+              ],
+ 'status': 'OK'}
