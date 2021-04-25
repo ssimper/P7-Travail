@@ -14,7 +14,7 @@ class GoogleDiscovery:
         payload = {
             #"address": "3 allee de l euro ezanville,+FR",
             "address": search,
-            "key": "AIzaSyDYFYBDMo2IDT-B2MsLOGdS2_X5HsuLIyo"
+            "key": "your_key_here"
         }
 
         res = requests.get(url, params=payload)
