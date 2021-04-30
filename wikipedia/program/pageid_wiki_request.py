@@ -1,6 +1,6 @@
 from pprint import pprint
 import requests
-from ..wiki_pageid import fake_data
+from ..wiki_places import fake_data
 
 url = "https://fr.wikipedia.org/w/api.php"
 

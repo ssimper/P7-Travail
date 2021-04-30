@@ -12,7 +12,7 @@ def test_find_places_works(monkeypatch):
 
     monkeypatch.setattr('requests.get', mock_request_get)
 
-remarkable_places = RemarkablePlaces()
-list_places, dico_places, my_favorite_place_pageid, my_favorite_place_title = remarkable_places.find_places('tic', 'tac')
-assert my_favorite_place_pageid == PAGEID
-assert my_favorite_place_title == TITLE
+    remarkable_places = RemarkablePlaces()
+    list_places, dico_places, my_favorite_place_pageid, my_favorite_place_title = remarkable_places.find_places('tic', 'tac')
+    assert my_favorite_place_pageid == PAGEID
+    assert my_favorite_place_title == TITLE
