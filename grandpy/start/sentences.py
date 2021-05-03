@@ -16,7 +16,7 @@ response = {
     's1': "Tu as de quoi noté ? Car il y a pas mal de chose.",
     's2': "De ce que je me souviens, car ça fait un moment maintenant ! " +
     "De quoi parlait-on déjà ... Ah oui !",
-    's3': "Ah oui, je me souviens bien."
+    's3': "Ah oui, je me souviens bien ...."
 }
 
 problem = {

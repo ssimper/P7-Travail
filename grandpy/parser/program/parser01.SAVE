@@ -1,7 +1,6 @@
 import unidecode
 import string
 import json
-import re
 
 class Parser:
 	"""Classe chargée de passer en minuscule, retirer
@@ -15,6 +14,7 @@ class Parser:
 		
 		self.sentence = sentence
 		
+
 
 	def lowerize(self):
 		# On passe en minuscule
@@ -40,11 +40,8 @@ class Parser:
 
 
 	def to_list(self):
-		# On place les mots dans une liste delimitée par les characères
-		# ' (\') et les espaces (\s)
-		#self.sentence = re.split('\'|\s', self.sentence)
-		self.sentence = re.split('\'|\-|\s', self.sentence)
-		#self.sentence = self.sentence.split(' ')
+		# On place les mots dans une liste
+		self.sentence = self.sentence.split(' ')
 		# On nettoie la liste des éléments vides (espaces)
 		for element in self.sentence:
 			[self.sentence.remove(element) for element in self.sentence if element == '']
@@ -56,7 +53,7 @@ class Parser:
 		with open("grandpy/parser/program/fr.json", "r") as read_file:
 			stop_words_list = json.load(read_file)
 		for word in stop_words_list:
-			#word = unidecode.unidecode(word)
+			word = unidecode.unidecode(word)
 			[self.sentence.remove(element) for element in self.sentence if element == word]
 		self.sentence = " ".join(self.sentence)
 		return self.sentence

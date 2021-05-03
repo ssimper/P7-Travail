@@ -1,5 +1,6 @@
 import requests
 from pprint import pprint
+from ...credentials import google_key
 
 
 class GoogleDiscovery:
@@ -14,12 +15,12 @@ class GoogleDiscovery:
         payload = {
             #"address": "3 allee de l euro ezanville,+FR",
             "address": search,
-            "key": "your key here"
+            "key": google_key
         }
 
         res = requests.get(url, params=payload)
         output = res.json()
-        #pprint.pprint(output)
+        #pprint(output)
         formatted_address = output['results'][0]['formatted_address']
         location_lat = output['results'][0]['geometry']['location']['lat']
         location_lng = output['results'][0]['geometry']['location']['lng']

@@ -24,6 +24,7 @@ class RemarkablePlaces:
         response = requests.get(url, params=params)
         geosearch_data = response.json()
         # I want all places (i put them in a dictionary)
+        # the key is the pageid and the value is the title.
         list_places = geosearch_data['query']['geosearch']
         for element in list_places:
             dico_places[element['pageid']] = element['title']
